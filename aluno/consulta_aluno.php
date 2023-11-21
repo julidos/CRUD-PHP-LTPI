@@ -34,10 +34,11 @@
 		  echo "<td>" . $id_aluno . "</td>";
 		  echo "<td>" . $ds_aluno . "</td>";
                   echo "<td>" . $ds_curso . "</td>";
+				  // cria link para ALTERACAO do respectivo id_curso
+				  echo '<td><a href="form_alteracao_aluno.php?id='. $row["id_aluno"].'">Alterar</a></td>';
                   // cria link para EXCLUSAO do respectivo id_curso
 		  echo '<td><a href="exclusao_aluno.php?id='. $row["id_aluno"] . '">Excluir</a></td>';
-		  // cria link para ALTERACAO do respectivo id_curso
-		  echo '<td><a href="form_alteracao_aluno.php?id='. $row["id_aluno"].'">Alterar</a></td>';
+
 		  
 		  echo "</tr>";
 		  // ou
