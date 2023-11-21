@@ -26,17 +26,17 @@
 		  $id = $row["id_curso"];
 		  $curso = $row["ds_curso"];
                   $nr_carga_horaria = $row["nr_carga_horaria"];
-                  $dt_inicio = $row["dt_inicio"];
+                  $dt_inicio = date("d/m/Y", strtotime($row["dt_inicio"]));
                   
 		  echo "<tr>";
 		  echo "<td>" . $id . "</td>";
 		  echo "<td>" . $curso . "</td>";
                   echo "<td>" . $nr_carga_horaria . "</td>";
                   echo "<td>" . $dt_inicio . "</td>";
-		  // cria link para EXCLUSAO do respectivo id_curso
-		  echo '<td><a href="exclusao_curso.php?id='. $row["id_curso"] . '">Excluir</a></td>';
 		  // cria link para ALTERACAO do respectivo id_curso
 		  echo '<td><a href="form_alteracao_curso.php?id='. $row["id_curso"] . '&curso='.urlencode($curso).'">Alterar</a></td>';
+		  // cria link para EXCLUSAO do respectivo id_curso
+		  echo '<td><a href="exclusao_curso.php?id='. $row["id_curso"] . '">Excluir</a></td>';
 		  
 		  echo "</tr>";
 		  // ou
